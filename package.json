@@ -30,6 +30,7 @@
     "build:prod": "lerna run build:prod",
     "build:test": "lerna run build:test",
     "clean": "lerna run clean",
+    "clean:node_modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "deduplicate": "yarn-deduplicate -s fewer --fail",
     "docs": "typedoc",
     "eslint:check": "eslint . --ext .ts,.tsx --cache",
@@ -62,7 +63,7 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
-    "@jupyterlab/buildutils": "~3.5.3",
+    "@jupyterlab/buildutils": "^4.0.2",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "eslint": "^8.27.0",
@@ -87,5 +88,9 @@
     "typedoc-plugin-markdown": "~3.14.0",
     "typescript": "~4.9.4",
     "yarn-deduplicate": "^6.0.0"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "escape-string-regexp": "^5.0.0"
   }
 }
